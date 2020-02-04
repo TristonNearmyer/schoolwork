@@ -22,6 +22,14 @@
 	
 <style>
 	
+	body {background-color: gray;
+	
+		<?php
+			echo("color: blue;");
+		?>
+	
+	}
+	
 	<?php
 		echo("h1{color: red;}");
 	?>
