@@ -10,11 +10,26 @@
 
 require('dbConnect.php'); //access and run this external file
 
+$inEventId = "";
+$inEventName = "";
+$inEventDescription ="";
+$inEventPresenter = "";
+$inEventDate = "";
+$inEventTime = "";
 
-try{
-	$eventName = "WDV341 Intro PHP";
-	$eventDescription = "we are inserting into a database";
-	$eventDate = "2020-02-24";
+
+
+$validForm = true;
+
+if(isset($_POST["form_submit"])){
+		
+	echo("<h1>thank you, your event has been added</h1>");
+	$eventId = $_POST["eventName"];
+	$eventName = $_POST["eventName"];
+	$eventDescription = $_POST["eventDescription"];
+	$eventPresenter = $_POST["eventPresenter"];
+	$eventDate = $_POST["eventDate"];
+	$eventTime = $_POST["eventTime"];
 
 
 
@@ -22,8 +37,8 @@ try{
 
 	//1: prepare the sql statement
 
-	$sql = "INSERT INTO wdv341_event (event_name, event_description, event_date)
-			VALUES (:eventName, :eventDescription, :eventDate)";
+	$sql = "INSERT INTO wdv341_event (event_id, event_name, event_description, event_presenter, event_date, event_time)
+			VALUES (:eventId, :eventName, :eventDescription, :eventPresenter, :eventDate, :eventTime)";
 
 	//2: create the prepared statement object
 
@@ -31,32 +46,26 @@ try{
 
 	//3:bind paramaters to the prepared statement object
 
+	$stmt->bindParam(':eventId', $eventId);
 	$stmt->bindParam(':eventName', $eventName);
-	$stmt->bindParam(':eventDescription',$eventDescription);
+	$stmt->bindParam(':eventDescription', $eventDescription);
+	$stmt->bindParam(':eventPresenter', $eventPresenter);
 	$stmt->bindParam(':eventDate', $eventDate);
+	$stmt->bindParam(':eventTime', $eventTime);
 
 	//4:Execute the prepared statement
 
 	$stmt->execute();
 	}
 
-catch(PDOException $e){
-	echo("WARNING");
-}
 
 $conn = null; //close your connection object
-
 ?>
-<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>Insert Events</title>
 </head>
-
-<body>
-	
-	<h2>thank you for your order</h2>
-	
-</body>
+<body>	
+</body>	
 </html>
