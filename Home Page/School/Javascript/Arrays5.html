@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Arrays 5</title>
+	
+	<script>
+	
+		let teams = ["Browns", "Bears", "Reds", "Cubs"];
+		
+		let scores = [0, 0, 0, 0];
+		
+		//alert(teams);
+		
+		//alert(scores);
+		
+		function lookUpTeam(inTeamName){
+		//	alert("this function works");
+			
+			let foundIndex = teams.indexOf(inTeamName);
+			
+			return foundIndex;
+			
+			
+		}
+		
+		alert(lookUpTeam("Reds") );	
+		
+		
+		function addScores(inTeamIndex,inTeamScore){
+			
+			let beginScore = scores(inTeamIndex);
+			
+			let endScore = beginScore + inTeamScore;
+			
+			scores(inTeamIndex) = endScore;
+		}
+		
+		function updateScore(){
+			alert("this function works");
+			
+			let inTeam = document.getElementById("teamName").value;
+			let inScore = document.getElementById("teamScore").value;
+			
+			let teamIndex = lookUpTeam(inTeam);
+			
+			addScores(teamIndex, inScore);
+			
+			document.getElementById("outScore").innerHTML = scores[inTeamIndex];
+		}
+	</script>
+	
+</head>
+
+<body>
+	<p>
+		<label for="teamName"> Enter Team Name:</label>
+		
+		<input type="text" id="teamName" name="teamName" placeholder="Enter Team Name">
+	
+		<label for="teamScore"> Enter Score:</label>
+		
+		<input type="text" id="teamScore" name="teamScore" placeholder="Enter Team Name">
+		
+		<span id="outScore">Updated Score: </span>
+
+		<button onClick="updateScore()">Update score</button>
+	
+	</p>
+</body>
+</html>

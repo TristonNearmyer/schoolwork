@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Animation</title>
+	
+	<style>
+	
+		.container{
+			border: 5px solid red;
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+			animation-name: changeColor, moveDiv;
+			animation-duration:5s, 5s;
+			animation-iteration-count: 5;
+			
+			
+		}
+		
+		
+		@keyframes changeColor{
+			0% {background-color:blue ;}
+			50% {background-color:red ;}
+			100% {background-color: blue;}
+		}
+		
+		@keyframes moveDiv{
+			0%{transform: translateX(0px);}
+			50%{transform: translateX(1000px);}
+			100%{transform: translateX(0px);}
+		}
+		
+		
+	</style>
+	
+	
+</head>
+
+<body>
+	
+	<h1>WDV205: Advanced CSS</h1>
+	
+	<h2>Example of using CSS Animation</h2>
+	
+	<div class="container">
+	
+		
+		
+	</div>
+		
+	
+</body>
+</html>

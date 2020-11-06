@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	display: flex;
+	justify-content: center;
+	background-color: lightgray;
+}
+
+#container {
+	
+	width: 95%;
+}
+
+main {
+	display: flex;
+	
+	
+}
+
+aside{
+	width: 20%;
+	height: fit-content;
+	padding: 15px;
+	margin-right : 15px;
+	border-radius: 10px;
+	border: solid 5px black;
+	
+	background-color: orangered;
+}
+
+aside ul{
+	padding: 0px;
+}
+
+.navigation li{
+	list-style-type: none;
+	padding: 5px;
+	font-weight: bold;
+	font-size: xx-large;
+	border-bottom: solid 1px #000000;
+}
+
+.servingSelect{
+	font-size: xx-large;
+}
+
+#chiliRecipe {
+	
+	background-color: orangered;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	width: 75%;
+	padding: 10px;
+	border-radius: 10px;
+	border: solid 5px black;
+}
+
+#chiliRecipe h1{
+	font-size: xx-large;
+	font-weight: bold;
+	text-align: center;
+}
+
+.image{
+	
+	
+}
+
+div img{
+	
+	border: solid 1px black;
+	width: 100%;
+	height: 100%;
+	
+}
+
+.recipe{
+	width: 100%;
+	
+}
+
+#cornbreadRecipe {
+	display: none ;
+}
+
+#pecanPieRecipe {
+	display: none ;
+}
+
+header {
+	width: 95%;
+	background-color: orangered;
+	color: white;
+	display: block;
+	margin-left: 20px;
+}
+
+p {
+	font-weight: bold;
+}
+
+.recipe li {
+	font-size: large;
+	padding-bottom: 10px;
+}

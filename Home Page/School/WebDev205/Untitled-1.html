@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	
+<style>
+	
+	.blue{
+		background-color: blue;
+		width:30%;
+		float:left;
+	}
+	
+	.green{
+		background-color: green;
+		width:30%;
+		float:left;
+	}
+	
+	.red{
+		background-color: red;
+		width:30%;
+		float:right;
+	}
+	
+	h2{
+		background-color: yellow;
+	}
+	
+	.clearfix::after{
+		content:"";
+		clear:both;
+		display:table;
+	}
+	
+</style>
+	
+</head>
+
+<body>
+	
+	<h1>WDV205 Advanced CSS</h1>
+	<h2>Float <p>Test</p> examples</h2>
+	
+	<div class="clearfix">
+		
+		<div class="blue">
+			<p>This is a blue div</p>
+		</div>
+
+		<div class="green">
+			<p>This is a green div</p>
+		</div>
+
+		<div class="red">
+			<p>This is a red div</p>
+		</div>
+	</div>
+	<p>This is end</p>
+	
+</body>
+</html>
