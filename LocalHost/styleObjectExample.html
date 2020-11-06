@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+	
+		p{
+			color: red;
+		}
+	
+	</style>
+	
+	<script>
+		
+		function changeParagraphColor(){
+			
+			alert("you are in the change color function");
+			
+			document.querySelector("p[style = 'color:green']").style.color='blue';
+			
+			
+			
+		}
+		
+	</script>
+	
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<h1>WDV321 Advanced Javascript</h1>
+	
+	<p style="color:green">working with the style object of the DOM objects</p>
+	
+	<p>this is another paragraph</p>
+	
+	<p>
+	
+		<button>change paragraph color</button>
+	
+	</p>
+	
+		<script>
+	
+			let styleObject = document.querySelector("style");
+			
+			console.log(styleObject);
+			
+			let pObject = document.querySelector("p");
+			
+			console.log(pObject);
+			
+			console.log(pObject.innerHTML);
+			
+			console.log(pObject.style);
+			
+			/*
+			
+			let pObject = document.querySelectorAll("p");
+			
+			console.log(pObject);
+			
+			console.log(pObject.innerHTML);
+			
+			console.log(pObject.style);
+			
+			*/
+			
+			document.querySelector("button").onclick = changeParagraphColor;
+			
+		
+		</script>
+	
+</body>
+</html>

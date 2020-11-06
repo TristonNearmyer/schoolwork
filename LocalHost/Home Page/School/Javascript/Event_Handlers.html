@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<script>
+		function displayClick(){
+			alert("you pressed the Click me button");
+		}
+		
+		function pageLoad(){ /*function will run after page has loaded*/
+			document.getElementById("clickMe").onClick = displayClick;
+			/*document.getElementById("clickMe").addEventListener("click", displayClick);*/
+		}
+		
+		
+		
+	
+	</script>
+</head>
+
+<body onLoad="pageLoad()">
+	<h1>WDV221: Inro Javascript</h1>
+	<h2>Unit5 Event Handlers</h2>
+	<p onMouseOver="alert('paragraph1');">this is paragraph 1</p>
+	<p>this is paragraph 2</p>
+	<p>this is paragraph 3</p>
+	<p><button id="clickMe">Click Me</button></p>
+
+</body>
+</html>
