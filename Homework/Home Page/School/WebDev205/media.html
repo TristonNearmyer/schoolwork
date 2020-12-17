@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--must have for media-->
+<title>Media</title>
+<style>
+	#container	{
+		width:980px;
+		margin: auto auto;	
+	}
+
+	.leftSide	{
+		width:50%;
+		float:left;
+		background-color:red;	
+	}
+
+	.rightSide	{
+		width:50%;
+		float:right;
+		background-color:blue;	
+	}
+	
+	.clearfix::after {
+	  content: "";
+	  clear: both;
+	  display: table; 
+	}
+	
+	@media screen and (max-width: 800px){
+		
+		.leftSide{
+			background-color: green;
+			width: 100%;
+		}
+		
+		.rightSide{
+			width: 100%;
+		}
+	}
+
+</style>
+
+
+
+</head>
+
+<body>
+	<div id="container">
+    
+    
+    <header>
+    	<h1>Header</h1>
+    </header>
+    
+    <div class="clearFix">
+    
+    	<section class="leftSide">
+        
+        	<h1>Left Section</h1>
+        
+        </section>
+    
+    
+    	<section class="rightSide">
+        
+        	<h1>Right Section</h1>
+        
+        </section>
+    
+    
+    </div>
+    
+    
+    <footer>
+    
+    	<h1>Footer</h1>
+    
+    </footer>
+    
+    
+    </div>
+
+</body>
+</html>
