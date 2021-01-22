@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>WDV221 Intro Javascript - In Class Lab Form Validation</title>
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript</h1>
+<h2>In Class Lab  - Form Validation</h2>
+<form id="form1" name="form1" method="post" action="">
+  <table>
+     <tr>
+      <td>Customer Name:</td>
+      <td><input type="text" name="textfield" id="textfield" /></td>
+    </tr> 
+    <tr>
+      <td>Item Price:</td>
+      <td><input type="text" name="textfield" id="textfield" /></td>
+    </tr>
+    <tr>
+      <td>Number Purchased:</td>
+      <td><input type="text" name="textfield2" id="textfield2" /></td>
+    </tr>
+    <tr>
+      <td>Sale Price:</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Total Sales: </td>
+      <td><p> </p></td>
+    </tr>
+  </table>
+  <p>
+    <input type="submit" name="button" id="button" value="Submit Order" />
+    <input type="reset" name="button2" id="button2" value="Reset" />
+    <input type="button" name="button3" id="button3" value="Clear Order" />
+  </p>
+</form>
+<h3>Instructions: Modify this page so that the form works as described.</h3>
+<ul>
+  <li>The Customer Name is required. </li>
+  <li>The Item Price field should do the following
+    <ul>
+      <li> should be a number</li>
+      <li>should allow decimal values</li>
+      <li>cannot be less that zero</li>
+      <li> display and highlight the error messages on the page </li>
+    </ul>
+  </li>
+  <li>The Number Purchased field should do the following:
+    <ul>
+      <li>be a number</li>
+      <li>should only allow whole numbers/integers</li>
+      <li>cannot be zero or less</li>
+      <li>display and highlight the error messages on the page</li>
+    </ul>
+  </li>
+  <li>The Reset button should clear the form fields, Sale Price area, Total Sales area, all error messages.</li>
+  <li>The Clear Order button should do the same as the Reset button.</li>
+  <li>The Submit order button should validate the fields and if all fields are valid display &quot;Valid Form&quot; in the Sales Price area and Total Sales area.</li>
+</ul>
+<p>&nbsp;</p>
+</body>
+</html>

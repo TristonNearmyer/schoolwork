@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WDV221 Intro Javascript</title>
+
+
+<script src="formatFunctions.js"></script>
+<script>
+
+function formatAmount()
+{
+	//alert("inside formatAmount()");
+	
+	var inAmt = document.getElementById("textfield").value;	//get input value and convert to number
+
+	document.getElementById("format1").innerHTML = dollarFormat(inAmt);
+	document.getElementById("format2").innerHTML = currency( parseFloat(inAmt) );	
+	document.getElementById("format3").innerHTML = testFormat(inAmt );		
+}//end formatAmount()
+
+
+</script>
+
+
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript</h1>
+<h2>Currency Formatting in Javascript</h2>
+<p>Use the form to display currency formatted amounts using the attached functions</p>
+<form name="form1" method="post" action="">
+  <p>&nbsp;</p>
+  <p>
+    <label>Enter a value
+      <input type="text" name="textfield" id="textfield">
+    </label>
+  </p>
+  <p>
+    <input type="button" name="button" id="button" value="Format as Currency" onClick="formatAmount()">
+    <input type="reset" name="button2" id="button2" value="Reset">
+  </p>
+  <p>&nbsp;</p>
+</form>
+
+<p>Formatted using dollarFormat():   <span id="format1"></span></p>
+<p>Formatted using currency():   <span id="format2"></span></p>
+<p>Formatted using test():   <span id="format3"></span></p>
+</body>
+</html>

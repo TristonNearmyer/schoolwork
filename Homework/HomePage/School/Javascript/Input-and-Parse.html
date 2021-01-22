@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	
+<script>
+	
+	function getValue(){
+		//alert("this function is working");
+		var inVal = document.getElementById("inputValue");
+		var inVal = document.getElementById("inputValue").value;
+		//alert("this variable contains "  + inVal);
+		document.getElementById("outValue").innerHTML = inVal;
+	}
+	
+</script>	
+	
+	
+	
+</head>
+
+<body>
+	
+	<h1>WDV221: Intro Javascript</h1>
+	
+	<h2>Unit-6: textfields and Operators</h2>
+	
+	<h3>Input and Parse Examples</h3>
+	
+	<p>
+		<label for="inputA">Input A:</label>
+		<input type="text" id="inputValue" name="inputValue" placeholder="">
+	
+	</p>
+	
+	<p>
+		<button onClick="getValue()">Get Value</button>
+	</p>
+	
+	<p> 
+		The Value is: <span id="outValue"></span>
+	</p>
+	
+	
+</body>
+</html>

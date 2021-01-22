@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	
+	<script>
+	
+		var teams = ["Reds", "Browns", "Bills", "Cubs"];
+		
+		alert(teams);
+		
+		function lookUpTeam(){
+			
+			
+			let inTeamName = document.getElementById("teamName").value;
+			
+			
+			
+			let nameIndex = teams.indexOf(inTeamName);
+			
+				if(nameIndex == -1){
+					alert(inTeamName + " is not availalble");
+				}
+
+				else{
+					alert("yes," + inTeamName + " is available");
+				}
+		}
+	
+	</script>
+	
+</head>
+
+<body>
+	<p>
+		<label for="teamName"> Enter Team Name:</label>
+		
+		<input type="text" id="teamName" name="teamName" placeholder="Enter Team Name">
+		
+		<button onClick="lookUpTeam()">is it available?</button>
+	</p>
+	
+</body>
+</html>
